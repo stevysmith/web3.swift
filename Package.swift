@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.7
 import PackageDescription
 
 let package = Package(
@@ -28,7 +28,7 @@ let package = Package(
                     .target(name: "Internal_CryptoSwift_PBDKF2"),
                     "BigInt",
                     "GenericJSON",
-                    .product(name: "secp256k1", package: "secp256k1.swift"),
+                    .product(name: "secp256k1", package: "secp256k1.swift", moduleAliases: ["SecpA": "secp256k1"]),
                     .product(name: "WebSocketKit", package: "websocket-kit"),
                     .product(name: "Logging", package: "swift-log")
                 ],
